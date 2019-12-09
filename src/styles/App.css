@@ -1,7 +1,11 @@
-/* Base Application Styles */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
 body {
+  font-family: 'Roboto' !important;
   color: #fff;
-  background: #222;
+  background: #616161;
+  height: 100%;
+  width: 100%;
 }
 
 .index img {
@@ -11,11 +15,169 @@ body {
   display: block;
 }
 
-.index .notice {
-  margin: 20px auto;
-  padding: 15px 0;
-  text-align: center;
-  border: 1px solid #000;
-  border-width: 1px 0;
-  background: #666;
+.drawer-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
 }
+
+.drawer-app-content {
+  flex: auto;
+  overflow: auto;
+}
+
+.top-app-bar-fix-adjust {
+  display: flex;
+  width: 100%;
+}
+
+.mdc-drawer--dismissible {
+  top: auto;
+}
+
+.topbar-app-personal{
+  background-color: #424242 !important;
+}
+
+.content-drawer{
+  background-color: #424242 !important;
+}
+
+.drawer-title{
+  text-align: center !important;
+  color: aliceblue !important;
+}
+
+.drawer-icon-button-personal{
+  right: 0em;
+  display: inline-flex;
+}
+
+#container {
+  position: relative;
+}
+
+.container-ngraph{
+  height: 100%;
+  width: 100%;
+}
+
+.top-bar-personal-one{
+  background-color: #ffbd39;
+  position: fixed !important;
+  bottom: 1rem !important;
+  right: 1rem !important;
+}
+
+.top-bar-personal-thee{
+  background-color: #ffbd39;
+  position: fixed !important;
+  bottom: 6rem !important;
+  right: 1rem !important;
+}
+
+.top-bar-personal-two{
+  background-color: #ffbd39;
+  position: fixed !important;
+  bottom: 11rem !important;
+  right: 1rem !important;
+}
+
+.top-bar-personal-four{
+  background-color: #ffbd39;
+  position: fixed !important;
+  bottom: 16rem !important;
+  right: 1rem !important;
+}
+
+.top-bar-personal-five{
+  background-color: #ffbd39;
+  position: fixed !important;
+  bottom: 18rem !important;
+  right: 1rem !important;
+}
+
+.container-ngraph{
+  width: 100% !important;
+  height: 90vh !important;
+}
+
+.container-app{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.search-bar{
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 60%;
+  right: 20%;
+}
+
+.title-dialog{
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.buttons-dialog-default{
+  margin: 0.5em;
+  font-weight: bold;
+  color: black !important;
+  background-color: #ffbd39 !important;
+}
+
+.buttons-dialog{
+  margin: 0.5em;
+  font-weight: bold;
+  color: #ffbd39 !important;
+  background-color: white !important;
+}
+
+.mt-1{
+  margin-top: 1.5em;
+}
+
+.panel-details{
+  position: absolute;
+  width: 10%;
+  height: 75%;
+  top: 10%;
+  right: 10%;
+  /*overflow-y: scroll;*/
+}
+
+.container-ngraph-dialog{
+  width: 350px !important;
+  max-width: 500px !important;
+}
+
+.snackbar-personal, button{
+  color: #ffbd39 !important;
+}
+
+.loading-animatin{
+  position: absolute;
+  top: 40%;
+  bottom: 40%;
+  left: 40%;
+  right: 40%;
+  padding: 5%;
+}
+
+.author{
+  width: 100px;
+  height: 100px;
+}
+
+.text-white{
+  color: aliceblue;
+}
+
+i.icon-black {
+  color: black;
+}
+
+
