@@ -79,7 +79,7 @@ class AppComponent extends React.Component {
           </IconButton>
           <DrawerTitle tag="h2" className="drawer-title">
             <div>
-              <img src="../images/vincenzopalazzoicon.png" className="author"/>
+              <img src="https://avatars2.githubusercontent.com/u/17150045?s=460&v=4" className="author"/>
               <p>Vincenzo Palazzo</p>
             </div>
           </DrawerTitle>
