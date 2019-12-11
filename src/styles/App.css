@@ -99,7 +99,7 @@ body {
 }
 
 .container-ngraph{
-  width: 100% !important;
+  width: 99% !important;
   height: 90vh !important;
 }
 
@@ -143,7 +143,7 @@ body {
 .panel-details{
   position: absolute;
   width: 10%;
-  height: 75%;
+  height: 65%;
   top: 10%;
   right: 10%;
   /*overflow-y: scroll;*/
@@ -174,6 +174,12 @@ body {
 
 .text-white{
   color: aliceblue;
+}
+
+.license-personal{
+  align-self: center;
+  margin-bottom: 0.5em;
+  margin-left: 4em;
 }
 
 i.icon-black {

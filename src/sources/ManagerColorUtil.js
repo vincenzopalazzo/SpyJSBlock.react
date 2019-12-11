@@ -1,6 +1,11 @@
-// Copyright (c) 2018-2019 Vincenzo Palazzo vicenzopalazzodev@gmail.com
-// Distributed under the Apache License Version 2.0 software license,
-// see https://www.apache.org/licenses/LICENSE-2.0.txt
+//SpyJSBlock.react (c) by Vincenzo Palazzo vincenzopalazzodev@gmail.com
+//
+//SpyJSBlock-Ngraph is licensed under a
+//Creative Commons Attribution 4.0 International License.
+//
+//You should have received a copy of the license along with this
+//work. If not, see <http://creativecommons.org/licenses/by/4.0/>
+
 
 'use strict';
 

@@ -1,3 +1,11 @@
+//SpyJSBlock.react (c) by Vincenzo Palazzo vincenzopalazzodev@gmail.com
+//
+//SpyJSBlock-Ngraph is licensed under a
+//Creative Commons Attribution 4.0 International License.
+//
+//You should have received a copy of the license along with this
+//work. If not, see <http://creativecommons.org/licenses/by/4.0/>
+
 require('normalize.css/normalize.css');
 require('styles/App.css');
 
@@ -16,6 +24,7 @@ import Dialog, {
 import {Snackbar} from '@material/react-snackbar';
 import SearchBar from 'material-ui-search-bar'
 import Loading from 'react-loading-animation';
+import Tooltip from '@material-ui/core/Tooltip';
 
 //NGraph module
 import FromPrecompute from 'ngraph.fromprecompute'
@@ -208,13 +217,13 @@ class NGraphContainer extends React.Component {
   doSearchNode(id) {
     let stringId = String(id);
     stringId.trim();
-    try{
+    try {
       ManagerActionContainer.findNodeWithId(this.state.render, stringId, 0xe65100);
       this.setState({
         id: stringId,
         idNodeDialogOpen: true
       });
-    }catch (e) {
+    } catch (e) {
       this.setState({
         openSnackBar: true,
         messageSnackBar: 'Node not found!'
@@ -222,36 +231,47 @@ class NGraphContainer extends React.Component {
     }
   }
 
-  destroyDialogSubGraph(){
+  destroyDialogSubGraph() {
     this.comp.remove();
   }
 
   render() {
     return (
       <div>
-        <div ref={div => {this.div = div;}}
+        <div ref={div => {
+          this.div = div;
+        }}
              className="container-ngraph"
         >
           <div className="loading-animatin">
             {
-              this.state.isLoading && <Loading  width={'85px'}  height={'100px'}/>
+              this.state.isLoading && <Loading width={'85px'} height={'100px'}/>
             }
           </div>
         </div>
+        <Tooltip title="Address Graph" aria-label="Address Graph">
+          <Fab icon={<i className="material-icons icon-black">account_balance_wallet</i>}
+               className="top-bar-personal-four"
+               onClick={() => this.buildGraphAddress()}
+          />
+        </Tooltip>
+        <Tooltip title="Transaction Graph" aria-label="Transaction Graph">
 
-        <Fab icon={<i className="material-icons icon-black">account_balance_wallet</i>}
-             className="top-bar-personal-four"
-             onClick={() => this.buildGraphAddress()}
-        />
-        <Fab icon={<i className="material-icons icon-black">trending_up</i>}
-             className="top-bar-personal-thee"
-             onClick={() => this.buildGraphTransactions()}/>
-        <Fab icon={<i className="material-icons icon-black">settings</i>}
-             className="top-bar-personal-two"
-             onClick={() => this.setState({isOpen: true})}/>
-        <Fab icon={<i className="material-icons icon-black">pause_circle_outline</i>}
-             className="top-bar-personal-one"
-             onClick={() => this.stateRender()}/>
+          <Fab icon={<i className="material-icons icon-black">trending_up</i>}
+               className="top-bar-personal-thee"
+               onClick={() => this.buildGraphTransactions()}/>
+        </Tooltip>
+        <Tooltip title="Clustering Algorithm" aria-label="Clustering Algorithm">
+
+          <Fab icon={<i className="material-icons icon-black">settings</i>}
+               className="top-bar-personal-two"
+               onClick={() => this.setState({isOpen: true})}/>
+        </Tooltip>
+        <Tooltip title="Manager Renderer" aria-label="Manager Renderer">
+          <Fab icon={<i className="material-icons icon-black">pause_circle_outline</i>}
+               className="top-bar-personal-one"
+               onClick={() => this.stateRender()}/>
+        </Tooltip>
         {this.state.render !== undefined && <SearchBar
           className="search-bar"
           value={this.state.value}
@@ -349,6 +369,7 @@ function _withNodeInformation(Dialog) {
     constructor(props) {
       super(props);
     }
+
     //TODO use the api explora of blockstream for details of node
     render() {
       let {idNodeDialogOpen, eventOnClose} = this.props;

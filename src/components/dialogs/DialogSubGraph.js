@@ -1,3 +1,11 @@
+//SpyJSBlock.react (c) by Vincenzo Palazzo vincenzopalazzodev@gmail.com
+//
+//SpyJSBlock-Ngraph is licensed under a
+//Creative Commons Attribution 4.0 International License.
+//
+//You should have received a copy of the license along with this
+//work. If not, see <http://creativecommons.org/licenses/by/4.0/>
+
 require('normalize.css/normalize.css');
 require('styles/App.css');
 
@@ -41,7 +49,7 @@ class DialogSubGraph extends React.Component {
     if (render && instanceLouvain) {
       let graph = render.graph(undefined);
       let classGraph = instanceLouvain.getSubGraph(graph, classSelected);
-      console.debug('Class found: ', classGraph, ' and do not built before');
+      //console.debug('Class found: ', classGraph, ' and do not built before');
       if (classSelected) {
         let renderPixi = CreatePIXIgraphics(classGraph.graph, {
           container: this.div,
@@ -49,7 +57,7 @@ class DialogSubGraph extends React.Component {
             backgroundColor: 0xFFFFFF,
             antialias: true
           },
-          labelConf: {
+          labelConf: { //This work only with this PR https://github.com/anvaka/ngraph.pixi/pull/8
             enable: true,
             style: { fontFamily: 'Roboto', fontSize: '20px' ,  fill: 0x000000}
           },
@@ -132,7 +140,7 @@ class DialogSubGraph extends React.Component {
         <Grid>
           <Row>
             <Cell columns={12}>
-              <p>Subgraph for the class {classSelected}</p>
+              <p> Class: {classSelected}</p>
               <div className="container-ngraph-dialog"
                 ref={div => {
                 this.div = div;
@@ -140,8 +148,8 @@ class DialogSubGraph extends React.Component {
             </Cell>
           </Row>
           <Row className="mt-1">
-            <Cell columns={5}/>
-            <Cell columns={7}>
+            <Cell columns={4}/>
+            <Cell columns={8}>
               <Button
                 className="buttons-dialog"
                 raised={true}

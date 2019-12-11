@@ -1,4 +1,17 @@
-import Loading from 'react-loading-animation';
+//SpyJSBlock.react (c) by Vincenzo Palazzo vincenzopalazzodev@gmail.com
+//
+//SpyJSBlock-Ngraph is licensed under a
+//Creative Commons Attribution 4.0 International License.
+//
+//You should have received a copy of the license along with this
+//work. If not, see <http://creativecommons.org/licenses/by/4.0/>
+//SpyJSBlock.react (c) by Vincenzo Palazzo vincenzopalazzodev@gmail.com
+//
+//SpyJSBlock-Ngraph is licensed under a
+//Creative Commons Attribution 4.0 International License.
+//
+//You should have received a copy of the license along with this
+//work. If not, see <http://creativecommons.org/licenses/by/4.0/>
 
 require('normalize.css/normalize.css');
 require('styles/App.css');
@@ -80,14 +93,25 @@ class AppComponent extends React.Component {
                 </ListItem>
                 <ListItem onClick={() => window.open('https://github.com/vincenzopalazzo/SpyJSBlock.react')}>
                   <ListItemGraphic graphic={<GoMarkGithub/>} />
-                  <ListItemText className='text-white' primaryText='Project' />
+                  <ListItemText className='text-white' primaryText='SpyJSBlock.react' />
+                </ListItem>
+                <ListItem onClick={() => window.open('https://vincenzopalazzo.github.io/SpyJSBlock/')}>
+                  <ListItemGraphic graphic={<GoMarkGithub/>} />
+                  <ListItemText className='text-white' primaryText='SpyJSBlock' />
+                </ListItem>
+                <ListItem onClick={() => window.open('https://vincenzopalazzo.github.io/SpyJSBlock-NGraph/')}>
+                  <ListItemGraphic graphic={<GoMarkGithub/>} />
+                  <ListItemText className='text-white' primaryText='SpyJSBlock-NGraph' />
                 </ListItem>
               </List>
 
             </IconContext.Provider>
 
-            <div className="fixed-bottom">
-              TODO license
+            <div className="fixed-bottom license-personal">
+              <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                <img src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+              </a>
+
             </div>
 
           </DrawerContent>
