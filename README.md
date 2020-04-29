@@ -16,7 +16,7 @@ You can found the last version App [here](https://github.com/vincenzopalazzo/Spy
 
 At the moment you can not run the app because I'm refactoring it, you can find my scheduler in the following TODO list
 
-P.S: I you want try to compile the app, you should rename the file package-old.json to package-old.json. I make this change because github send me alert about the old dependence. 
+P.S: If you want try to compile the app, you should rename the file package-old.json to package-old.json. I make this change because github send me alert about the old dependence. 
 
 - [ ] Update version react to last version; :construction:
 - [ ] Update the app structure; :construction:
