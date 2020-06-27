@@ -6,9 +6,6 @@
 //You should have received a copy of the license along with this
 //work. If not, see <http://creativecommons.org/licenses/by/4.0/>
 
-
-'use strict';
-
 const COLORS = [0xff5722,
   0xef6c00,
   0xc6ff00,

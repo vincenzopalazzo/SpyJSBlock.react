@@ -5,16 +5,13 @@
 //
 //You should have received a copy of the license along with this
 //work. If not, see <http://creativecommons.org/licenses/by/4.0/>
-
-
-'use strict';
-
 import NgraphLouvain from 'ngraph.louvain'
 import ManagerColorUtil from '../sources/ManagerColorUtil'
 import Coarsen from 'ngraph.coarsen'
 
 let mapClassForColor = new Map();
 let listClass = [];
+
 module.exports = (function () {
   let instance;
 

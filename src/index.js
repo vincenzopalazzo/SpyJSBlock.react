@@ -1,15 +1,17 @@
-//SpyJSBlock.react (c) by Vincenzo Palazzo vincenzopalazzodev@gmail.com
-//
-//SpyJSBlock-Ngraph is licensed under a
-//Creative Commons Attribution 4.0 International License.
-//
-//You should have received a copy of the license along with this
-//work. If not, see <http://creativecommons.org/licenses/by/4.0/>
-
-import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './styles/App.css';
 import App from './components/Main';
+import * as serviceWorker from './serviceWorker';
 
-// Render the main component into the dom
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+  //<React.StrictMode>
+    <App />,
+  //</React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

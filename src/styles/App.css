@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 body {
-  font-family: 'Roboto' !important;
+  font-family: 'Roboto', serif !important;
   color: #fff;
   background: #616161;
-  height: 100%;
-  width: 100%;
+  height: 95%;
+  width: 95%;
 }
 
 .index img {
